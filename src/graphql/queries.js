@@ -16,6 +16,7 @@ export const getBlog = /* GraphQL */ `
         }
         nextToken
       }
+      image
       createdAt
       updatedAt
     }
@@ -34,6 +35,7 @@ export const listBlogs = /* GraphQL */ `
         posts {
           nextToken
         }
+        image
         createdAt
         updatedAt
       }
@@ -53,6 +55,7 @@ export const getPost = /* GraphQL */ `
         posts {
           nextToken
         }
+        image
         createdAt
         updatedAt
       }
@@ -85,6 +88,7 @@ export const listPosts = /* GraphQL */ `
         blog {
           id
           name
+          image
           createdAt
           updatedAt
         }
@@ -110,6 +114,7 @@ export const getComment = /* GraphQL */ `
         blog {
           id
           name
+          image
           createdAt
           updatedAt
         }

@@ -19,6 +19,7 @@ export const createBlog = /* GraphQL */ `
         }
         nextToken
       }
+      image
       createdAt
       updatedAt
     }
@@ -42,6 +43,7 @@ export const updateBlog = /* GraphQL */ `
         }
         nextToken
       }
+      image
       createdAt
       updatedAt
     }
@@ -65,6 +67,7 @@ export const deleteBlog = /* GraphQL */ `
         }
         nextToken
       }
+      image
       createdAt
       updatedAt
     }
@@ -85,6 +88,7 @@ export const createPost = /* GraphQL */ `
         posts {
           nextToken
         }
+        image
         createdAt
         updatedAt
       }
@@ -118,6 +122,7 @@ export const updatePost = /* GraphQL */ `
         posts {
           nextToken
         }
+        image
         createdAt
         updatedAt
       }
@@ -151,6 +156,7 @@ export const deletePost = /* GraphQL */ `
         posts {
           nextToken
         }
+        image
         createdAt
         updatedAt
       }
@@ -184,6 +190,7 @@ export const createComment = /* GraphQL */ `
         blog {
           id
           name
+          image
           createdAt
           updatedAt
         }
@@ -214,6 +221,7 @@ export const updateComment = /* GraphQL */ `
         blog {
           id
           name
+          image
           createdAt
           updatedAt
         }
@@ -244,6 +252,7 @@ export const deleteComment = /* GraphQL */ `
         blog {
           id
           name
+          image
           createdAt
           updatedAt
         }
