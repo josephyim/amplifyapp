@@ -45,9 +45,8 @@ function App() {
       <div style={{marginBottom: 30}}>
         {
           blogs.map(blog => (
-            <div key={blog.id || blog.name}>
+            <div key={blog.id}>
               <h2>{blog.name}</h2>
-              <h2>{blog.id}</h2>
               <button onClick={() => deleteBlog(blog)}>Delete blog</button>
             </div>
           ))
