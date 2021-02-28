@@ -1,21 +1,14 @@
-type Blog @model {
+type Blog @model @auth(rules: [{allow: public}]) {
   id: ID!
   name: String!
   posts: [Post] @connection(keyName: "byBlog", fields: ["id"])
   image: String
 }
 
-type Post @model @key(name: "byBlog", fields: ["blogID"]) {
+type Post @model @key(name: "byBlog", fields: ["blogID"]) @auth(rules: [{allow: public}]) {
   id: ID!
   title: String!
   blogID: ID!
   blog: Blog @connection(fields: ["blogID"])
-  comments: [Comment] @connection(keyName: "byPost", fields: ["id"])
 }
-
-type Comment @model @key(name: "byPost", fields: ["postID", "content"]) {
-  id: ID!
-  postID: ID!
-  post: Post @connection(fields: ["postID"])
-  content: String!
-}
+ 

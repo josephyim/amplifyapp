@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "storage": {
+      "Blog:@model(appsync)": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ]
+    }
+  },
+  "lambdaLayers": []
+}
